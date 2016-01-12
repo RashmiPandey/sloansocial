@@ -1,0 +1,169 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=6812, tid=3228
+#
+# JRE version:  (8.0_45-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.45-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001ebe000):  JavaThread "Unknown thread" [_thread_in_vm, id=3228, stack(0x0000000002750000,0x0000000002850000)]
+
+Stack: [0x0000000002750000,0x0000000002850000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b57a]
+V  [jvm.dll+0x279873]
+V  [jvm.dll+0x27a509]
+V  [jvm.dll+0x271825]
+V  [jvm.dll+0x1606]
+V  [jvm.dll+0x3c08c2]
+V  [jvm.dll+0x3eecb2]
+V  [jvm.dll+0x3ef1bc]
+V  [jvm.dll+0x3ea7a7]
+V  [jvm.dll+0xf2cf2]
+V  [jvm.dll+0x20f0c9]
+V  [jvm.dll+0x240e0a]
+V  [jvm.dll+0x15ba41]
+C  [java.exe+0x216e]
+C  [java.exe+0xcce7]
+C  [java.exe+0xcd7b]
+C  [kernel32.dll+0x15a4d]
+C  [ntdll.dll+0x2b831]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000001ebe000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3228, stack(0x0000000002750000,0x0000000002850000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 17408K, used 307K [0x00000000ecc00000, 0x00000000edf00000, 0x0000000100000000)
+  eden space 15360K, 2% used [0x00000000ecc00000,0x00000000ecc4ccd8,0x00000000edb00000)
+  from space 2048K, 0% used [0x00000000edd00000,0x00000000edd00000,0x00000000edf00000)
+  to   space 2048K, 0% used [0x00000000edb00000,0x00000000edb00000,0x00000000edd00000)
+ ParOldGen       total 39936K, used 0K [0x00000000c6400000, 0x00000000c8b00000, 0x00000000ecc00000)
+  object space 39936K, 0% used [0x00000000c6400000,0x00000000c6400000,0x00000000c8b00000)
+ Metaspace       used 766K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ee0000,0x00000000120b0000] byte_map_base: 0x00000000118ae000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000059f64040
+ Begin Bits: [0x0000000012630000, 0x00000000134a0000)
+ End Bits:   [0x00000000134a0000, 0x0000000014310000)
+
+Polling page: 0x0000000001e60000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002b20000, 0x0000000002d90000, 0x0000000011b20000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.028 loading class java/lang/Short
+Event: 0.029 loading class java/lang/Short done
+Event: 0.029 loading class java/lang/Integer
+Event: 0.029 loading class java/lang/Integer done
+Event: 0.029 loading class java/lang/Long
+Event: 0.029 loading class java/lang/Long done
+Event: 0.029 loading class java/lang/NullPointerException
+Event: 0.030 loading class java/lang/NullPointerException done
+Event: 0.030 loading class java/lang/ArithmeticException
+Event: 0.030 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f750000 - 0x000000013f787000 	C:\Program Files\Java\jdk1.8.0_45\bin\java.exe
+0x0000000077650000 - 0x00000000777f9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077530000 - 0x0000000077650000 	C:\Windows\system32\kernel32.dll
+0x000007fefc110000 - 0x000007fefc17c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefde00000 - 0x000007fefdedb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefcad0000 - 0x000007fefcb6f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdde0000 - 0x000007fefddff000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe520000 - 0x000007fefe64d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077430000 - 0x000000007752a000 	C:\Windows\system32\USER32.dll
+0x000007fefca60000 - 0x000007fefcac7000 	C:\Windows\system32\GDI32.dll
+0x000007fefcf10000 - 0x000007fefcf1e000 	C:\Windows\system32\LPK.dll
+0x000007fefc7a0000 - 0x000007fefc86a000 	C:\Windows\system32\USP10.dll
+0x000007fefa8e0000 - 0x000007fefaad4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefcd50000 - 0x000007fefcdc1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefc720000 - 0x000007fefc74e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefdcb0000 - 0x000007fefddb9000 	C:\Windows\system32\MSCTF.dll
+0x000007fef44f0000 - 0x000007fef4522000 	C:\Program Files (x86)\AVG\Av\avghooka.dll
+0x0000000078a20000 - 0x0000000078af2000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\msvcr100.dll
+0x0000000059760000 - 0x0000000059fe3000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\server\jvm.dll
+0x000007fef6800000 - 0x000007fef6809000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefc750000 - 0x000007fefc79d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe650000 - 0x000007fefe658000 	C:\Windows\system32\NSI.dll
+0x000007fefa0d0000 - 0x000007fefa10b000 	C:\Windows\system32\WINMM.dll
+0x000007fefb1e0000 - 0x000007fefb1ec000 	C:\Windows\system32\VERSION.dll
+0x0000000077820000 - 0x0000000077827000 	C:\Windows\system32\PSAPI.DLL
+0x0000000068870000 - 0x000000006887f000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\verify.dll
+0x000000005a850000 - 0x000000005a879000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\java.dll
+0x0000000061900000 - 0x0000000061916000 	C:\Program Files\Java\jdk1.8.0_45\jre\bin\zip.dll
+0x000007fee95b0000 - 0x000007fee96d5000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): D:\Rashmi\Dan\ionic\social\platforms\android\\gradle\wrapper\gradle-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_45
+CLASSPATH=D:\Rashmi\Dan\ionic\social\platforms\android\\gradle\wrapper\gradle-wrapper.jar
+PATH=C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Users\Rashmi\AppData\Local\Android\android-sdk\platform-tools;C:\Users\Rashmi\AppData\Local\Android\android-sdk\tools;C:\Users\Rashmi\AppData\Local\Android\sdk;D:\Rashmi\Dan\Thrive\softwares\gradle-2.8-bin\gradle-2.8\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jdk1.8.0_45\bin;C:\jdk1.7.0_51\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Users\Rashmi\AppData\Roaming\npm;C:\Users\Rashmi\AppData\Local\Android\sdk\tools;C:\Users\Rashmi\AppData\Local\Android\sdk\platform-tools
+USERNAME=Rashmi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.19045)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 3780504k(193360k free), swap 8775824k(22084k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b15), built on Apr 30 2015 12:40:44 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Jan 11 20:12:17 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

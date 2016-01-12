@@ -1,0 +1,751 @@
+/* === Bootstrap ==== */
+
+.btn:focus, .btn:active {
+    outline: none !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.panel-title a:focus {
+    outline: none;
+}
+
+/* === Colors ==== */
+
+.complete {
+    background: #3a7bd5;
+    color: #fff !important;
+}
+
+.complete:hover {
+    background: rgba(58, 123, 213, .9);
+}
+
+.complete:active {
+    background: #2873cd;
+}
+
+.success {
+    background: #10cfbd;
+    color: #fff !important;
+}
+
+.success:hover {
+    background: #40d9ca;
+}
+
+.success:active {
+    background: #0dad9e;
+}
+
+.danger {
+    background: #f55753;
+    color: #fff !important;
+}
+
+.danger:hover {
+    background: #f77975;
+}
+
+.danger:active {
+    background: #cd4945;
+}
+
+/* === Checkbox and Radio ==== */
+
+.form-checkbox, .form-radio {
+    align-self: flex-start;
+    display: flex !important;
+    font-weight: 400;
+}
+
+.form-checkbox input[type="checkbox"], .form-radio input[type="radio"] {
+    display: none;
+}
+
+.form-checkbox input[type="checkbox"] + span, .form-radio input[type="radio"] + span {
+    align-items: center;
+    display: flex;
+}
+
+.form-checkbox input[type="checkbox"] + span::before, .form-radio input[type="radio"] + span::before {
+    border: 1px solid #0fbaf3;
+    content: '';
+    display: flex;
+    justify-content: center;
+    height: 15px;
+    line-height: 13px;
+    margin: 0 7px 0 0;
+    min-height: 15px;
+    min-width: 15px;
+    width: 15px;
+}
+
+.form-checkbox input[type="checkbox"] + span::before {
+    background: transparent;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 9px;
+    font-weight: lighter;
+    transition: border 0.2s linear 0s, color 0.2s linear 0s,
+    background-color 0.1s linear 0s;
+}
+
+.form-checkbox input[type="checkbox"]:checked + span::before {
+    content: "\f00c";
+    color: #0fbaf3;
+}
+
+.form-radio input[type="radio"] + span::before {
+    border-radius: 100%;
+    transition: border 0.3s 0s cubic-bezier(0.455, 0.03, 0.215, 1.33);
+}
+
+.form-radio input[type="radio"]:checked + span::before {
+    border-width: 5px;
+}
+
+/* === Global ==== */
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* === Header ==== */
+.app header {
+    background: linear-gradient(90deg, #3a7bd5, #0fbaf3);
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 40px 0 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.app header.transparent {
+    background: transparent;
+    height: 70px;
+}
+
+.app .logo {
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+}
+
+.app .logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.app .logo img {
+    width: 40px;
+}
+
+.app .logo span {
+    font-size: 130%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.app header .menu {
+    display: flex;
+}
+
+.app header .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app header .menu ul li {
+    display: flex;
+}
+
+.app header .menu ul li a {
+    align-self: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 90%;
+    font-weight: 200;
+    margin: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.app header .menu ul li.active a, .app header .menu ul li a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.app header .menu ul .sign-in a .fa, .app header .menu ul .sign-out a .fa {
+    display: flex;
+    font-size: 150%;
+    padding: 0 10px 0 0;
+}
+
+/* === Footer ==== */
+.app footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.app footer .info {
+    background: #484848;
+    color: #bababa;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 30px 0;
+}
+
+.app footer .title {
+    color: #fff;
+    font-size: 120%;
+}
+
+.app footer .get-in-touch, .app footer .information, .app footer .social,
+.app footer .contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.app footer .get-in-touch .work-hours, .app footer .information ul, .app footer .social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app footer .get-in-touch p {
+    width: 280px;
+}
+
+.app footer .information p {
+    color: #bababa;
+    width: 250px;
+}
+
+.app footer .social a {
+    display: flex;
+    color: #bababa;
+    cursor: pointer;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.app footer .social a:hover {
+    color: #fff;
+}
+
+.app footer .social .fa {
+    display: flex;
+    font-size: 150%;
+    padding: 0 15px 0 0;
+}
+
+.app footer .contacts .fa {
+    font-size: 150%;
+    padding: 0 10px 0 0;
+}
+
+.app footer .contacts address {
+    display: flex;
+}
+
+.app footer .contacts address:hover .fa, .app footer .contacts a:hover .fa {
+    color: #fff;
+}
+
+.app footer .contacts address span {
+    width: 190px;
+}
+
+.app footer .contacts a {
+    color: #bababa;
+    display: flex;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.app footer .copyright {
+    background: #323232;
+    color: #bababa;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.app footer .copyright small {
+    font-size: 100%;
+}
+
+/* === Login ==== */
+
+.app .login {
+    align-items: center;
+    background: linear-gradient(90deg, #3a7bd5 10%, #0fbaf3 90%);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app .login .logo {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.app .login .form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 400px;
+    padding: 30px;
+}
+
+.app .login .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.app .login .form .title {
+    margin: 10px 0;
+}
+
+.app .login .form label {
+    align-self: flex-start;
+    display: flex;
+    margin: 8px 0;
+}
+
+.app .login .form .form-control {
+    display: block;
+}
+
+.app .login .form .form-checkbox {
+    margin: 12px 0 12px 1px;
+}
+
+.app .login .form .submit {
+    align-self: flex-start;
+    display: flex;
+}
+
+.app .login .form .social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.app .login .form .social a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.app .login .form .social .facebook {
+    background: #3b5998;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+
+.app .login .form .social .google-plus {
+    background: #dd4b39;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+
+.app .login .form .social .facebook .fa, .app .login .form .social .google-plus .fa {
+    font-size: 150%;
+}
+
+/* === Home ==== */
+
+.app .home {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0 0 3% 0;
+}
+
+.app .home .hero {
+    align-items: center;
+    background: linear-gradient(90deg, #3a7bd5 10%, #0fbaf3 90%);
+    display: flex;
+    flex-basis: 550px;
+    justify-content: center;
+}
+
+.app .home .hero .lead {
+    color: #fff;
+    font-size: 250%;
+    font-weight: 100;
+}
+
+.app .home .reason {
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    width: 65%;
+}
+
+/* === Projects ==== */
+
+.app .projects {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: calc(60px + 3%) 10% 3%;
+}
+
+.app .projects .add, .app .project .activities .add, .app .project .nouns .add {
+    align-items: baseline;
+    align-self: flex-end;
+    color: #fff;
+    display: flex;
+}
+
+.app .projects .add .fa, .app .project .activities .add .fa, .app .project .nouns .add .fa {
+    padding: 0 5px 0 0;
+}
+
+.app .projects ul, .app .project .activities ul, .app .project .nouns ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 2% 0;
+}
+
+.app .projects ul li, .app .project .activities ul li, .app .project .nouns ul li {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin: 0 5% 3% 0;
+}
+
+.app .projects ul li:nth-child(3n), .app .project .activities ul li:nth-child(3n),
+.app .project .nouns ul li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.app .projects ul li .title, .app .project .activities ul li .title,
+.app .project .nouns ul li .title {
+    background: #48b0f7;
+    color: #fff;
+    font-size: 125%;
+    margin: 0;
+    padding: 10px 15px;
+    word-wrap: break-word;
+}
+
+.app .projects ul li .label, .app .project .activities ul li .label,
+.app .project .nouns ul li .label {
+    color: #000;
+    font-size: 105%;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+.app .projects ul li .description, .app .project .activities ul li .description,
+.app .project .nouns ul li .description {
+    display: flex;
+    flex: 1;
+    padding: 0 15px;
+    word-wrap: break-word;
+}
+
+.app .projects ul li .action, .app .project .activities ul li .action,
+.app .project .nouns ul li .action {
+    padding: 15px;
+    text-align: center;
+}
+
+/* === Project Update ==== */
+
+.app .project, .app .activity, .app .noun, .app .contact, .app .about,
+.app .services {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: calc(60px + 2%) 10% 3%;
+}
+
+.app .project > .title,
+.app .activity > .title,
+.app .noun > .title {
+    font-size: 200%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.app .project .tabs .nav-tabs li a, .app .activity .tabs .nav-tabs li a {
+    color: #555;
+}
+
+.app .project .tabs .tab-content, .app .activity .tabs .tab-content,
+.app .noun .tabs .tab-content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding: 30px;
+}
+
+.app .project .general .properties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.app .project .general .properties .item {
+    width: 30%;
+}
+
+.app .project .general .properties .item label {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.app .project .general .properties .item .form-control {
+    width: 90%;
+    margin: 0 0 5px 0;
+}
+
+.app .project .general .properties .item .type {
+    display: flex;
+    flex-direction: column;
+}
+
+.app .project .general .properties .action {
+    margin: 15px 0 0 0;
+}
+
+.app .project .general .architecture form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.app .project .general .architecture .client, .app .project .general .architecture .server,
+.app .project .general .architecture .miscellaneous {
+    width: 30%;
+}
+
+.app .project .general .architecture .client .mobile-only .lead {
+    font-size: 120%;
+    padding: 0;
+}
+
+.app .project .general .architecture .client .mobile-only .form-group {
+    display: flex;
+}
+
+.app .project .general .architecture .client .mobile-only .form-group label {
+    margin: 0 8px;
+}
+
+.app .project .general .architecture .title {
+    color: #3a7bd5;
+    font-size: 130%;
+    margin: 10px 0 20px 0;
+    text-align: left;
+}
+
+.app .project .general .architecture .item label {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.app .project .general .architecture .item .protocol {
+    display: flex;
+}
+
+.app .project .general .architecture .item .protocol .form-radio {
+    margin: 0 8px;
+}
+
+.app .project .general .architecture .item .form-control {
+    margin: 0 0 5px 0;
+    width: 90%;
+}
+
+.app .project .user-activities .activities, .app .project .user-nouns .nouns {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* === Activity Designer ==== */
+
+.app .activity > .go-back,
+.app .noun > .go-back {
+    align-self: flex-end;
+    display: flex;
+}
+
+.app .activity .info > .title {
+    color: #3a7bd5;
+    font-size: 140%;
+    margin: 0 0 15px 0;
+}
+
+.app .activity .info .general {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+
+.app .activity .info .general .item {
+    width: 30%;
+}
+
+.app .activity .info .general .item label {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.app .activity .info .general .item .form-control {
+    margin: 0 0 5px 0;
+    width: 90%;
+}
+
+.app .activity .screens ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app .activity .screens ul li {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+}
+
+.app .activity .screens ul li .title {
+    color: #3a7bd5;
+    margin: 20px 0;
+}
+
+.app .activity .screens ul li .fa {
+    color: #546a79;
+    font-size: 1000%;
+}
+
+.app .activity .screens ul li .btn {
+    margin: 10px 0;
+}
+
+.app .activity .nouns ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1%;
+}
+
+.app .activity .nouns ul li {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.app .activity .nouns .primary-noun .title,
+.app .activity .nouns .secondary-noun .title {
+    align-self: flex-start;
+    display: flex;
+    border-bottom: 2px solid #eee;
+    padding: 8px 0;
+    margin: 10px 0 10px 0;
+}
+
+.app .activity .nouns .primary-noun .form-group,
+.app .activity .nouns .secondary-noun .form-group {
+    width: 70%;
+}
+
+.app .activity .nouns .primary-noun .form-group label,
+.app .activity .nouns .secondary-noun .form-group label {
+    padding: 5px 0;
+}
+
+.app .activity .nouns .primary-noun .form-group p,
+.app .activity .nouns .secondary-noun .form-group p {
+    margin: 10px 3px;
+}
+
+/* === Noun Designer ==== */
+
+.app .noun .tabs .required-info .required {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.app .noun .tabs .required-info .required .item {
+    width: 30%;
+}
+
+.app .noun .tabs .required-info .relationships {
+    display: flex;
+    flex-direction: column;
+}
+
+.app .noun .tabs .required-info .relationships .form-control {
+    margin: 0 0 10px 20px;
+    width: 20%;
+}
+
+.app .noun .tabs .required-info .properties .title {
+    margin: 20px 0 10px;
+}
+
+.app .noun .tabs .required-info .cache {
+    align-self: flex-start;
+    display: flex;
+}
+
+/* modal margin fixes
+   Modified : July 15 2015
+   @Author: pravin 
+*/
+.modal-dialog {
+    margin-top: 100px;
+}
+
+.modal-header {
+    background: linear-gradient(90deg, #3a7bd5, #0fbaf3);
+    width: 100%;
+    color: #fff;
+}
+
+.delete-confirmation{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: antiquewhite;
+  padding: 20px;
+}
